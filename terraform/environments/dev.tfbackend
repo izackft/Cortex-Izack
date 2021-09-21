@@ -1,0 +1,4 @@
+encrypt = false
+bucket  = "teste-terraform-cortex"
+region  = "us-east-1"
+key     = "ec2/terraform.tfstate"

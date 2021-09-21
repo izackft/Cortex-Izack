@@ -1,0 +1,6 @@
+---
+- name: Install Cortex Env
+  become: yes
+  hosts: all
+  roles:
+    - role: common

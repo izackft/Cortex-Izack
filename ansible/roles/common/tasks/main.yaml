@@ -1,0 +1,28 @@
+- name: "[Common role] - Install htop"
+  package: name=htop state=present
+
+- name: "[Common role] - Install zip"
+  package: name=zip state=present  
+
+- name: "Update System"
+  shell: sudo apt update && sudo apt upgrade -y 
+
+- name: "[Common role] - Install Java"
+  package: name=openjdk-8-jdk state=present
+
+- name: "[Common role] - Install PostgresSQL"
+  package: name=postgresql-10 state=present
+
+- name: "[Common role] - Install Jetty"
+  package: name=jetty9 state=present
+
+- name: "Set TimeZone to America/Sao_Paulo"
+  shell: sudo timedatectl set-timezone America/Sao_Paulo
+
+- name: "Deploy Cortex WAR"
+  copy: src=case-devops.war dest=/var/lib/jetty9/webapps mode=0655
+
+
+
+
+  

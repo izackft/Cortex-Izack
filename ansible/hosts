@@ -1,0 +1,2 @@
+[default]
+54.164.152.132 ansible_user=ubuntu ansible_ssh_private_key_file='cortex.pem'
